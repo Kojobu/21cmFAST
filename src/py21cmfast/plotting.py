@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib import colormaps
 from astropy import units as un
 from astropy.cosmology import z_at_value
 from matplotlib import colors
@@ -25,7 +26,7 @@ eor_colour = colors.LinearSegmentedColormap.from_list(
         (1, "cyan"),
     ],
 )
-plt.register_cmap(cmap=eor_colour)
+colormaps.register(cmap=eor_colour)
 
 
 def _imshow_slice(
