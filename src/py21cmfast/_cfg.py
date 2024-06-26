@@ -39,7 +39,7 @@ class Config(dict):
         for k, v in self._defaults.items():
             if k not in self:
                 if k not in self._aliases:
-                    warnings.warn("Your configuration file is out of date. Updating...")
+                    #warnings.warn("Your configuration file is out of date. Updating...")
                     do_write = True
                     self[k] = v
 
@@ -55,9 +55,9 @@ class Config(dict):
                             del self[alias]
                             break
                     else:
-                        warnings.warn(
-                            "Your configuration file is out of date. Updating..."
-                        )
+                        #warnings.warn(
+                        #    "Your configuration file is out of date. Updating..."
+                        #)
                         do_write = True
                         self[k] = v
 
